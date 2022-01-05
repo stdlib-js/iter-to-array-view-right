@@ -132,9 +132,9 @@ var arr = iterator2arrayviewRight( iter, new Float64Array( 4 ), fcn );
 
 The invoked function is provided three arguments:
 
--   `value`: iterated value
--   `index`: destination index (zero-based)
--   `n`: iteration index (zero-based)
+-   **value**: iterated value.
+-   **index**: destination index (zero-based).
+-   **n**: iteration index (zero-based).
 
 ```javascript
 var Uint8Array = require( '@stdlib/array-uint8' );
@@ -183,6 +183,7 @@ var count = ctx.count;
 ## Notes
 
 -   Iteration stops when an output array view is full **or** an iterator finishes; whichever comes first.
+-   The function supports output array-like objects having getter and setter accessors for array element access (e.g., [`@stdlib/array/complex64`][@stdlib/array/complex64]).
 
 </section>
 
@@ -305,6 +306,8 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/iter-to-array-view-right/main/LICENSE
+
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
 <!-- <related-links> -->
 
