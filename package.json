@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/iter-to-array-view-right",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Fill an array-like object view from right to left with values returned from an iterator.",
   "license": "Apache-2.0",
   "author": {
