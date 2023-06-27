@@ -37,27 +37,27 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/array-base-accessor-setter": "^0.0.x",
-    "@stdlib/array-base-assert-is-accessor-array": "^0.0.x",
-    "@stdlib/array-base-setter": "^0.0.x",
-    "@stdlib/array-dtype": "^0.0.x",
-    "@stdlib/assert-is-collection": "^0.0.x",
-    "@stdlib/assert-is-function": "^0.0.x",
-    "@stdlib/assert-is-integer": "^0.0.x",
-    "@stdlib/assert-is-iterator-like": "^0.0.x",
-    "@stdlib/string-format": "^0.0.x",
-    "@stdlib/types": "^0.0.x"
+    "@stdlib/array-base-accessor-setter": "^0.0.1",
+    "@stdlib/array-base-assert-is-accessor-array": "^0.0.1",
+    "@stdlib/array-base-setter": "^0.0.1",
+    "@stdlib/array-dtype": "^0.0.6",
+    "@stdlib/assert-is-collection": "^0.0.8",
+    "@stdlib/assert-is-function": "^0.0.8",
+    "@stdlib/assert-is-integer": "^0.0.8",
+    "@stdlib/assert-is-iterator-like": "^0.0.7",
+    "@stdlib/string-format": "^0.0.3",
+    "@stdlib/types": "^0.0.14"
   },
   "devDependencies": {
-    "@stdlib/array-complex128": "^0.0.x",
-    "@stdlib/array-float64": "^0.0.x",
-    "@stdlib/array-to-iterator": "^0.0.x",
-    "@stdlib/bench": "^0.0.x",
-    "@stdlib/complex-float64": "^0.0.x",
-    "@stdlib/math-base-assert-is-nan": "^0.0.x",
-    "@stdlib/random-iter-randu": "^0.0.x",
-    "@stdlib/strided-base-reinterpret-complex128": "^0.0.x",
-    "@stdlib/utils-noop": "^0.0.x",
+    "@stdlib/array-complex128": "^0.0.6",
+    "@stdlib/array-float64": "^0.0.6",
+    "@stdlib/array-to-iterator": "^0.0.6",
+    "@stdlib/bench": "^0.0.12",
+    "@stdlib/complex-float64": "^0.0.8",
+    "@stdlib/math-base-assert-is-nan": "^0.0.8",
+    "@stdlib/random-iter-randu": "^0.0.6",
+    "@stdlib/strided-base-reinterpret-complex128": "^0.0.2",
+    "@stdlib/utils-noop": "^0.0.14",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git"
@@ -103,7 +103,7 @@
     "slice"
   ],
   "funding": {
-    "type": "patreon",
-    "url": "https://www.patreon.com/athan"
+    "type": "opencollective",
+    "url": "https://opencollective.com/stdlib"
   }
 }
