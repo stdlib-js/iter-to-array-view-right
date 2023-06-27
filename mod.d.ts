@@ -18,7 +18,7 @@
 
 // TypeScript Version: 4.1
 
-/// <reference types="@stdlib/types"/>
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
 import { TypedIterator, TypedIterableIterator } from '@stdlib/types/iter';
 import { Collection } from '@stdlib/types/object';
