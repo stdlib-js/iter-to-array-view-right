@@ -42,10 +42,10 @@
     "@stdlib/array-base-setter": "^0.1.0",
     "@stdlib/array-dtype": "^0.1.0",
     "@stdlib/assert-is-collection": "^0.1.0",
-    "@stdlib/assert-is-function": "^0.1.0",
+    "@stdlib/assert-is-function": "^0.1.1",
     "@stdlib/assert-is-integer": "^0.1.0",
-    "@stdlib/assert-is-iterator-like": "^0.1.0",
-    "@stdlib/string-format": "^0.1.0",
+    "@stdlib/assert-is-iterator-like": "^0.1.1",
+    "@stdlib/string-format": "^0.1.1",
     "@stdlib/types": "^0.1.0"
   },
   "devDependencies": {
@@ -54,10 +54,10 @@
     "@stdlib/array-to-iterator": "^0.1.0",
     "@stdlib/bench": "^0.1.0",
     "@stdlib/complex-float64": "^0.1.0",
-    "@stdlib/math-base-assert-is-nan": "^0.1.0",
+    "@stdlib/math-base-assert-is-nan": "^0.1.1",
     "@stdlib/random-iter-randu": "^0.1.0",
     "@stdlib/strided-base-reinterpret-complex128": "^0.1.0",
-    "@stdlib/utils-noop": "^0.1.0",
+    "@stdlib/utils-noop": "^0.1.1",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git"
