@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import iterator2arrayviewRight from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-to-array-view-right@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/iter-to-array-view-right/tags). For example,
+
+```javascript
 import iterator2arrayviewRight from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-to-array-view-right@v0.2.1-deno/mod.js';
 ```
 
@@ -203,7 +208,7 @@ var count = ctx.count;
 ```javascript
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
-import iterator2arrayviewRight from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-to-array-view-right@v0.2.1-deno/mod.js';
+import iterator2arrayviewRight from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-to-array-view-right@deno/mod.js';
 
 function scale( v, i, n ) {
     return v * (n+1) * 10.0;
