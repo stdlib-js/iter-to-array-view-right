@@ -45,14 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/iter-to-array-view-right
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import iterator2arrayviewRight from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-to-array-view-right@deno/mod.js';
+var iterator2arrayviewRight = require( '@stdlib/iter-to-array-view-right' );
 ```
 
 #### iterator2arrayviewRight( iterator, dest\[, begin\[, end]]\[, mapFcn\[, thisArg]] )
@@ -60,8 +78,8 @@ import iterator2arrayviewRight from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-
 Fills an array-like `object` view from right to left with values returned from an `iterator`.
 
 ```javascript
-import Uint8Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@deno/mod.js';
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var Uint8Array = require( '@stdlib/array-uint8' );
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 var iter = array2iterator( [ 1, 2, 3, 4 ] );
 
@@ -72,8 +90,8 @@ var arr = iterator2arrayviewRight( iter, new Uint8Array( 10 ) );
 The `begin` and `end` arguments define the starting (inclusive) and ending (non-inclusive) indices of the array view. By default, the function begins filling from the last element of a provided array-like `object` (i.e., from the "end"). To specify an alternative view end, provide an `end` argument (zero-based and non-inclusive).
 
 ```javascript
-import Uint8Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@deno/mod.js';
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var Uint8Array = require( '@stdlib/array-uint8' );
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 var iter = array2iterator( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] );
 
@@ -84,8 +102,8 @@ var arr = iterator2arrayviewRight( iter, new Uint8Array( 10 ), 0, 4 );
 If `end` is less than `0`, the last view element is resolved relative to the last element of the provided array-like `object`. For example, the following achieves the same behavior as the previous example
 
 ```javascript
-import Uint8Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@deno/mod.js';
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var Uint8Array = require( '@stdlib/array-uint8' );
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 var iter = array2iterator( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] );
 
@@ -96,8 +114,8 @@ var arr = iterator2arrayviewRight( iter, new Uint8Array( 10 ), 0, -6 );
 By default, the function fills through the first element of the provided array-like `object`. To specify an alternative view beginning, provide a `begin` argument (zero-based and inclusive).
 
 ```javascript
-import Uint8Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@deno/mod.js';
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var Uint8Array = require( '@stdlib/array-uint8' );
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 var iter = array2iterator( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] );
 
@@ -108,8 +126,8 @@ var arr = iterator2arrayviewRight( iter, new Uint8Array( 10 ), 3 );
 If `begin` is less than `0`, the first view element index is resolved relative to the last element of the provided array-like `object`. For example, the following achieves the same behavior as the previous example
 
 ```javascript
-import Uint8Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@deno/mod.js';
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var Uint8Array = require( '@stdlib/array-uint8' );
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 var iter = array2iterator( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] );
 
@@ -120,8 +138,8 @@ var arr = iterator2arrayviewRight( iter, new Uint8Array( 10 ), -7 );
 To invoke a function for each iterated value, provide a callback function.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var Float64Array = require( '@stdlib/array-float64' );
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 function fcn( v ) {
     return v * 10.0;
@@ -140,8 +158,8 @@ The invoked function is provided three arguments:
 -   **n**: iteration index (zero-based).
 
 ```javascript
-import Uint8Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-uint8@deno/mod.js';
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var Uint8Array = require( '@stdlib/array-uint8' );
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 function fcn( v, i, n ) {
     return v * (n+1);
@@ -156,8 +174,8 @@ var arr = iterator2arrayviewRight( iter, new Uint8Array( 4 ), fcn );
 To set the callback function execution context, provide a `thisArg`.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
+var Float64Array = require( '@stdlib/array-float64' );
+var randu = require( '@stdlib/random-iter-randu' );
 
 function fcn( v ) {
     this.count += 1;
@@ -201,9 +219,9 @@ var count = ctx.count;
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
-import iterator2arrayviewRight from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-to-array-view-right@deno/mod.js';
+var Float64Array = require( '@stdlib/array-float64' );
+var randu = require( '@stdlib/random-iter-randu' );
+var iterator2arrayviewRight = require( '@stdlib/iter-to-array-view-right' );
 
 function scale( v, i, n ) {
     return v * (n+1) * 10.0;
@@ -258,7 +276,7 @@ for ( i = 0; i < arr.length; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -275,7 +293,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -321,15 +339,15 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/iter-to-array-view-right/main/LICENSE
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/deno
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
 <!-- <related-links> -->
 
-[@stdlib/array/from-iterator]: https://github.com/stdlib-js/array-from-iterator/tree/deno
+[@stdlib/array/from-iterator]: https://github.com/stdlib-js/array-from-iterator
 
-[@stdlib/array/to-view-iterator-right]: https://github.com/stdlib-js/array-to-view-iterator-right/tree/deno
+[@stdlib/array/to-view-iterator-right]: https://github.com/stdlib-js/array-to-view-iterator-right
 
-[@stdlib/iter/to-array-view]: https://github.com/stdlib-js/iter-to-array-view/tree/deno
+[@stdlib/iter/to-array-view]: https://github.com/stdlib-js/iter-to-array-view
 
 <!-- </related-links> -->
 
